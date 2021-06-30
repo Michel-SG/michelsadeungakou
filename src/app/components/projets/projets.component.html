@@ -1,0 +1,27 @@
+<div class="marge container">
+     <div class="row d-flex justify-content-center mb-5 mt-4 ">
+        <div class=" col-md card mb-4 p-0 border rounded bg-white shadow mx-4" style="width: 18em; ">
+            <a *ngIf="article.icon" [routerLink]="['/accueil']" class="text-center mt-3"><i class="{{ article.icon }}"></i>{{ article.nomIcon}}</a>
+            <div *ngIf="article.imageUrl" class=" col-md-4 w-100 hauteur mb-3"><img class=" h-100 border rounded bg-white w-100"  src="{{ article.imageUrl }}" alt="photo data"/> </div>
+            <div class="card-body">
+                <h4 *ngIf="article.titre" class="card-title pb-3 ">{{ article.titre }}</h4>
+                <h5 *ngIf="article.resume" class="card-title pb-3">Contexte : {{ article.resume }}</h5>
+                <p class="card-text fw-bold fs-5">Quelques activités</p>
+                <p *ngIf="article.outils" class="card-text text-color">Outilts : {{ article.outils }}.</p>
+                <p *ngIf="article.premier" class="card-text">{{ article.premier }}.</p>
+                <p *ngIf="article.deux" class="card-text">{{ article.deux }}.</p>
+                <p *ngIf="article.trois" class="card-text">{{ article.trois }}.</p>
+                <p *ngIf="article.quatre" class="card-text">{{ article.quatre }}.</p>
+                <p *ngIf="article.cinq" class="card-text">{{ article.cinq }}.</p>
+                <p *ngIf="article.six" class="card-text">{{ article.six }}.</p>
+                <p *ngIf="article.sept" class="card-text">{{ article.sept }}.</p>
+                <p *ngIf="article.huit" class="card-text">{{ article.huit }}.</p>
+                <p *ngIf="article.neuf" class="card-text">{{ article.neuf }}.</p>
+                <p *ngIf="article.dix" class="card-text">{{ article.dix }}.</p>
+                <p ><a class="btn btn-link pe-5" routerLink="/accueil"><i class="fas fa-backward"></i> Retour</a></p>
+            </div>
+        </div>
+    </div>
+   
+</div>
+

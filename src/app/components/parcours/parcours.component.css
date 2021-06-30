@@ -1,0 +1,13 @@
+.card-text{
+    text-align: justify;
+}
+
+.marge {
+    margin-top: 6.1em;
+    font-size: 19px;
+}
+.rayon{
+    height: 12em;
+    width: 10em;
+    border-radius: 60%;
+}

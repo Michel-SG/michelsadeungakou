@@ -1,0 +1,54 @@
+<div class="container marge">
+    <p class=" size ">Nous sommes le : {{ currentDate | async |date:'d/M/yyyy, à  h:mm:ss' }}</p>
+    <div class="row d-flex flex-row border rounded p-0 m-0">
+        <div class="card-body col-md-8 p-0 m-0  ">
+            <h5 class="card-title text-center fs-3 pt-3">Bienvenue sur le site de Michel</h5>
+            <p class="card-text px-3 size">Je suis développeur web Full Stack, disponible pour vous accompagner dans 
+                votre transformation digitale.<br>
+                Ma mission est de vous aider à créer un site sur-mesure, qui correspond à vos besoins.<br>
+                Sentez-vous à l'aise de découvrir mon contenu et de consulter mes réalisations.</p>          
+            <p class="text-center ">
+                <a class="btn btn-primary mt-1" [routerLink]="['/contact']">Contactez-moi!</a>
+            </p>
+        </div>
+        <div class=" col-md-4 p-0 m-0"><img class=" border rounded bg-white w-100"  src="{{articles[0].imageJombo}}" alt="photo code"/> </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-4 ">
+        <h3 class="text-center fs-4">Quelques réalisations</h3>
+        <div *ngFor="let objet of articles" class=" col-md-4 card mb-4 p-0  border rounded bg-white shadow mx-4" style="width: 18em; ">
+            <a *ngIf="objet.icon" [routerLink]="['/projets']" class="text-center mt-3"><i class="{{ objet.icon }}"></i>{{ objet.nomIcon }}</a>
+             <div *ngIf="objet.imageUrl" class="col-md-4  w-100"><img class=" border rounded bg-white w-100"  src="{{ objet.imageUrl }}" alt="photo data"/> </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ objet.titre }}</h5>
+                <p class="card-text">{{ objet.resume }}.</p>
+                <p class="d-flex justify-content-center ">
+                <a [routerLink]="['/projets', objet.id]" class="btn btn-primary mt-4"><i class="far fa-edit"></i> Voir plus</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex text-center justify-content-center mb-5 mt-4 ">
+        <h3 class=" fs-4">Voici quelques outils que j'utilise</h3>
+        <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-angular fa-4x"></i>Angular
+        </div>
+         <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-react fa-4x"></i>React
+         </div>
+         <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-vuejs fa-4x"></i>Vue.js
+        </div>
+        <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-node fa-4x"></i>Node.js
+        </div>
+        <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-symfony fa-4x"></i>Symfony
+        </div>
+        <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-php fa-4x"></i>Php
+        </div>
+        <div class=" col-md card mb-4 border rounded bg-white shadow mx-4">
+            <i class="fab fa-bootstrap fa-4x"></i>Bootstrap
+        </div>
+    </div>
+</div>
